@@ -2,35 +2,53 @@
 <html lang="en">
 
 <head>
+    <!-- Meta Tags for Character Encoding and Responsive Design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS (CDN) for Styling and Responsive Utilities -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: DynaPuff -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
     <title>To-Do List</title>
 </head>
 
 <body>
+    <!-- Main Container for To-Do Application -->
     <div class="mainContainer border-none">
+        <!-- Heading Section -->
         <h1 class="heading">To-Do List</h1>
         <p id="text">Tame your daily chaos—add, check, and conquer your tasks like a boss!</p>
+
+        <!-- Task Input Field and Add Button -->
         <div class="inputButton">
             <label for="enterTask" class="visually-hidden">Enter a task: </label>
             <input type="text" id="enterTask" placeholder="Add a Task">
             <button id="addTask">Add</button>
         </div>
+
+        <!-- Task List Section -->
         <div class="tasks">
-            <!-- Inside <div class="tasks"> -->
+            <!-- Filter Dropdown Menu -->
             <div class="dropdown text-end px-3 mb-4" id="dropdownMenu">
-                 <h3>Your Tasks:</h3>
+                <h3>Your Tasks:</h3>
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-filter me-2"></i>Filter Tasks
                 </button>
+
+                <!-- Filter Options: All, Active, Completed -->
                 <ul class="dropdown-menu" id="ulDropdown" aria-labelledby="filterDropdown">
                     <li id="listItem"><a class="dropdown-item" href="#" data-filter="all">All</a></li>
                     <li id="listItem"><a class="dropdown-item" href="#" data-filter="active">Active</a></li>
@@ -38,14 +56,18 @@
                 </ul>
             </div>
 
+            <!-- Unordered List to Hold Task Items -->
             <ul id="taskList"></ul>
         </div>
-
     </div>
+
+    <!-- Bootstrap Bundle JS for Dropdown and Other Components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript Logic -->
+    <script src="app.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-<script src="app.js"></script>
 
 </html>

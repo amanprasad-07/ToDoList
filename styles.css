@@ -1,37 +1,40 @@
+/* Reset and global styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "DynaPuff", system-ui;
+    font-family: "DynaPuff", system-ui; /* Playful font */
 }
 
+/* Main container holding the entire app */
 .mainContainer {
     width: auto;
     min-width: 300px;
     min-height: 100vh;
-    height: auto;
     margin: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 28px;
-    background-color: #a2d2ff;
+    background-color: #a2d2ff; /* Soft blue background */
 }
 
+/* Application heading style */
 .heading {
     margin-top: 40px;
     margin-right: 160px;
     font-size: 40px;
-    color: #fe659d;
+    color: #fe659d; /* Bright pink title */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Optional subheading or small paragraph */
 #text {
-    margin: 0;
     color: #3f0064;
 }
 
+/* Container for input and add button */
 .inputButton {
     min-width: 200px;
     display: flex;
@@ -41,11 +44,11 @@
     margin: 40px 0;
 }
 
+/* Input box where users type task */
 #enterTask {
     width: auto;
     height: 55px;
-    padding: 10px;
-    padding-left: 20px;
+    padding: 10px 10px 10px 20px;
     border: 1px solid #cdb4db;
     border-top-left-radius: 28px;
     border-bottom-left-radius: 28px;
@@ -53,16 +56,16 @@
     color: #3f0064;
 }
 
+/* Placeholder text color for input field */
 #enterTask::placeholder {
     color: #6f5b7a;
 }
 
+/* Add Task button styling */
 #addTask {
-    width: auto;
     min-width: 80px;
     height: 55px;
     padding: 10px;
-    padding-right: 10px;
     border: 1px solid #cdb4db;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -73,49 +76,53 @@
     outline: none;
 }
 
+/* Hover effect for Add Task button */
 #addTask:hover {
     background-color: #fb85b0;
     cursor: pointer;
 }
 
+/* Active/clicked effect for Add Task button */
 #addTask:active {
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2),
         0 2px 4px rgba(0, 0, 0, 0.1);
     transform: scale(1.03);
 }
 
+/* Container that holds the task list and heading */
 .tasks {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     min-width: 135px;
-    border: none;
     border-radius: 28px;
     background-color: #cdb4db;
-    padding: 10px 10px;
-    ;
+    padding: 10px;
 }
 
+/* Subheading inside task section */
 h3 {
     color: #27003d;
     padding: 0 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Task list styles */
 #taskList {
     width: 100%;
-    border: none;
     padding: 0;
     overflow: hidden;
 }
 
+/* Filter dropdown pressed effect */
 #filterDropdown:active {
     box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2),
         0 2px 4px rgba(0, 0, 0, 0.1);
     transform: scale(1.03);
 }
 
+/* Dropdown menu for filters */
 #ulDropdown {
     padding: 0;
     border: 1px solid #cdb4db;
@@ -123,12 +130,13 @@ h3 {
     overflow: hidden;
 }
 
+/* Filter menu items */
 #listItem {
     min-width: 70px;
     padding: 5px;
-
 }
 
+/* Alternate background for better readability */
 #listItem:nth-child(odd) {
     background-color: #bde0fe;
 }
@@ -137,14 +145,14 @@ h3 {
     background-color: #a2d2ff;
 }
 
+/* Checkbox color */
 input[type="checkbox"] {
     accent-color: #cdb4db;
-
 }
 
+/* Task list item styles */
 li {
     width: 100%;
-    /* min-width: 345px; */
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -153,6 +161,7 @@ li {
     color: #27003d;
 }
 
+/* Alternate colors for tasks */
 li:nth-child(odd) {
     background-color: #ffc8dd;
 }
@@ -161,6 +170,7 @@ li:nth-child(even) {
     background-color: #ffafcc;
 }
 
+/* Rounded corners for first and last task items */
 #taskList li:first-child {
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
@@ -171,12 +181,13 @@ li:nth-child(even) {
     border-bottom-right-radius: 28px;
 }
 
+/* Style for completed tasks */
 .completed {
     text-decoration: line-through;
     color: #6f5b7a;
 }
 
-
+/* Custom checkbox setup */
 .custom-checkbox {
     cursor: pointer;
     display: flex;
@@ -184,6 +195,7 @@ li:nth-child(even) {
     user-select: none;
 }
 
+/* Hide the native checkbox but keep functionality */
 .checkbox-input {
     position: absolute;
     width: 1.375em;
@@ -192,6 +204,7 @@ li:nth-child(even) {
     cursor: pointer;
 }
 
+/* SVG or icon for custom checkbox */
 .checkbox-icon {
     width: 1.375em;
     height: 1.375em;
@@ -199,28 +212,32 @@ li:nth-child(even) {
     overflow: visible;
 }
 
+/* Checkbox tick animation */
 .checkbox-icon .tick {
     stroke-dasharray: 20px;
     stroke-dashoffset: 20px;
     transition: stroke-dashoffset 0.2s ease-out;
 }
 
-.checkbox-input:checked+.checkbox-icon .tick {
+/* When checked, show the tick mark */
+.checkbox-input:checked + .checkbox-icon .tick {
     color: #27003d;
     stroke-dashoffset: 0;
 }
 
+/* Label beside the custom checkbox */
 .checkbox-label {
     margin-left: 0.5em;
     transition: all 0.2s ease;
 }
 
-.checkbox-input:checked+.checkbox-icon+.checkbox-label {
+/* Style label when checked */
+.checkbox-input:checked + .checkbox-icon + .checkbox-label {
     text-decoration: line-through;
     color: #bdadc6;
 }
 
-
+/* Medium screens: tablets */
 @media (min-width: 600px) and (max-width: 1023px) {
     .heading {
         margin-right: 0;
@@ -245,6 +262,7 @@ li:nth-child(even) {
     }
 }
 
+/* Large screens: desktops */
 @media (min-width: 1024px) {
     .heading {
         margin-right: 0;
