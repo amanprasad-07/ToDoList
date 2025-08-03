@@ -43,6 +43,7 @@
 
 #enterTask {
     width: auto;
+    min-width: 70px;
     height: 55px;
     padding: 10px;
     padding-left: 20px;
