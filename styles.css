@@ -7,7 +7,7 @@
 
 .mainContainer {
     width: auto;
-    min-width: 350px;
+    min-width: 300px;
     min-height: 100vh;
     height: auto;
     margin: 20px;
@@ -33,10 +33,11 @@
 }
 
 .inputButton {
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: center;
     margin: 40px 0;
 }
 
@@ -58,7 +59,7 @@
 
 #addTask {
     width: auto;
-    min-width: 100px;
+    /* min-width: 100px; */
     height: 55px;
     padding: 10px;
     padding-right: 10px;
