@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DynaPuff", system-ui;
+}
+
+  .mainContainer {
+    width: auto;
+    min-width: 350px;
+    min-height: 100vh;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 28px;
+    background-color: #a2d2ff;
+}
+
+.heading {
+    margin-top: 40px;
+    margin-right: 160px;
+    font-size: 40px;
+    color: #fe659d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#text {
+    margin: 0;
+    color: #3f0064;
+}
+
+.inputButton {
+    min-width: 300px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#enterTask {
+    width: auto;
+    height: 55px;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #cdb4db;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    background-color: rgb(255 242 247);
+    color: #3f0064;
+}
+
+#enterTask::placeholder {
+    color: #6f5b7a;
+}
+
+#addTask {
+    width: auto;
+    min-width: 100px;
+    height: 55px;
+    padding: 10px;
+    padding-right: 10px;
+    border: 1px solid #cdb4db;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-left: none;
+    background-color: #ffafcc;
+    color: #3f0064;
+    /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 135px;
+    border: none;
+    border-radius: 28px;
+    background-color: #cdb4db;
+    padding: 10px 10px;
+    /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); */
+    ;
+}
+
+h3 {
+    color: #27003d;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#taskList {
+    width: 100%;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+#filter {
+    margin: 4px 0;
+    margin-right: 20px;
+    margin-left: 227px;
+}
+
+#ulDropdown {
+    padding: 0;
+    border: 1px solid #cdb4db;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+#listItem {
+    min-width: 70px;
+    padding: 5px;
+
+}
+
+#listItem:nth-child(odd) {
+    background-color: #bde0fe;
+}
+
+#listItem:nth-child(even) {
+    background-color: #a2d2ff;
+}
+
+input[type="checkbox"] {
+    accent-color: #cdb4db;
+
+}
+
+li {
+    width: 100%;
+    /* min-width: 345px; */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #27003d;
+}
+
+li:nth-child(odd) {
+    background-color: #ffc8dd;
+}
+
+li:nth-child(even) {
+    background-color: #ffafcc;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6f5b7a;
+}
+
+
+.custom-checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox-input {
+    position: absolute;
+    width: 1.375em;
+    height: 1.375em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    width: 1.375em;
+    height: 1.375em;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.checkbox-icon .tick {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+    transition: stroke-dashoffset 0.2s ease-out;
+}
+
+.checkbox-input:checked+.checkbox-icon .tick {
+    color: #27003d;
+    stroke-dashoffset: 0;
+}
+
+.checkbox-label {
+    margin-left: 0.5em;
+    transition: all 0.2s ease;
+}
+
+/* Optional: strike-through text when checked */
+.checkbox-input:checked+.checkbox-icon+.checkbox-label {
+    text-decoration: line-through;
+    color: #bdadc6;
+}
+
+
+.mainContainer {
+    width: auto;
+    min-width: 350px;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 28px;
+    background-color: #a2d2ff;
+}
+
+.heading {
+    margin-top: 40px;
+    margin-right: 160px;
+    font-size: 40px;
+    color: #fe659d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#text {
+    margin: 0;
+    color: #3f0064;
+}
+
+.inputButton {
+    min-width: 300px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#enterTask {
+    width: auto;
+    height: 55px;
+    padding: 10px;
+    padding-left: 20px;
+    border: 1px solid #cdb4db;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    background-color: #ffdfeb;
+    color: #3f0064;
+}
+
+#enterTask::placeholder {
+    color: #6f5b7a;
+}
+
+#addTask {
+    width: auto;
+    min-width: 100px;
+    height: 55px;
+    padding: 10px;
+    padding-right: 10px;
+    border: 1px solid #cdb4db;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    border-left: none;
+    background-color: #ffafcc;
+    color: #3f0064;
+    /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 135px;
+    border: none;
+    border-radius: 28px;
+    background-color: #cdb4db;
+    padding: 10px 10px;
+    /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5); */
+    ;
+}
+
+h3 {
+    color: #27003d;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#taskList {
+    width: 100%;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+#filter {
+    margin: 4px 0;
+    margin-right: 20px;
+    margin-left: 227px;
+}
+
+#ulDropdown {
+    padding: 0;
+    border: 1px solid #cdb4db;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+#listItem {
+    min-width: 70px;
+    padding: 5px;
+
+}
+
+#listItem:nth-child(odd) {
+    background-color: #bde0fe;
+}
+
+#listItem:nth-child(even) {
+    background-color: #a2d2ff;
+}
+
+input[type="checkbox"] {
+    accent-color: #cdb4db;
+
+}
+
+li {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #27003d;
+}
+
+li:nth-child(odd) {
+    background-color: #ffc8dd;
+}
+
+li:nth-child(even) {
+    background-color: #ffafcc;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6f5b7a;
+}
+
+
+.custom-checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox-input {
+    position: absolute;
+    width: 1.375em;
+    height: 1.375em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    width: 1.375em;
+    height: 1.375em;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.checkbox-icon .tick {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+    transition: stroke-dashoffset 0.2s ease-out;
+}
+
+.checkbox-input:checked+.checkbox-icon .tick {
+    color: #27003d;
+    stroke-dashoffset: 0;
+}
+
+.checkbox-label {
+    margin-left: 0.5em;
+    transition: all 0.2s ease;
+}
+
+/* Optional: strike-through text when checked */
+.checkbox-input:checked+.checkbox-icon+.checkbox-label {
+    text-decoration: line-through;
+    color: #bdadc6;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .heading {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .inputButton {
+        margin: 40px 40px;
+        justify-content: center;
+    }
+
+    #enterTask{
+        width: 400px;
+    }
+
+    #addTask {
+        width: 150px;
+    }
+    h3{
+        margin: 20px 0;
+    }
+
+    #taskList li:first-child{
+        border-top-left-radius: 28px ;
+        border-top-right-radius: 28px ;
+    }
+
+     #taskList li:last-child{
+        border-bottom-left-radius: 28px ;
+        border-bottom-right-radius: 28px ;
+    }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .inputButton {
+        margin: 40px 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #enterTask{
+        width: 700px;
+    }
+
+    #addTask {
+        width: 170px;
+    }
+
+    #dropdownMenu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3{
+        margin: 20px 0;
+    }
+
+    #taskList li:first-child{
+        border-top-left-radius: 28px ;
+        border-top-right-radius: 28px ;
+    }
+
+     #taskList li:last-child{
+        border-bottom-left-radius: 28px ;
+        border-bottom-right-radius: 28px ;
+    }
+}
